@@ -82,7 +82,8 @@ export class ARMindEngine {
 
       const { renderer, scene, camera } = this.mindThree;
 
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.25));
+      // Optimize pixel ratio to 1.0 to prevent GPU VRAM memory exhaustion on high-density mobile screens
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.0));
 
       // Studio Lighting for High-Res Luggage
       const ambientLight = new THREE.AmbientLight(0xffffff, 1.4);
@@ -120,6 +121,15 @@ export class ARMindEngine {
 
       // Load Pristine High-Resolution 55.87 MB Original GLB Model
       await this.load3DModel('./blue_suitcase.glb');
+
+      // FORCED GPU VRAM WARMUP & SHADER PRE-COMPILATION
+      // Eliminate mobile iOS Safari & Android Chrome Out-Of-Memory reloads by forcing Three.js to compile shaders
+      // and upload all 55.87 MB of texture buffers into GPU VRAM right now, BEFORE turning on the heavy video camera!
+      this.updateStatus('Pre-loading textures into GPU memory...', 'warning');
+      this.anchor.group.visible = true;
+      renderer.compile(scene, camera);
+      renderer.render(scene, camera); // Silent offline warmup render pass
+      this.anchor.group.visible = false;
 
       // Attach Touch & Mouse Control Handlers for Turntable Manipulation
       this.setupTouchAndMouseControls();
@@ -221,6 +231,9 @@ export class ARMindEngine {
             if (child.isMesh) {
               child.castShadow = false;
               child.receiveShadow = false;
+              if (child.material) {
+                child.material.precision = 'mediump'; // Lightweight mobile shader memory precision
+              }
             }
           });
 

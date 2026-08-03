@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
       tab3DStudio.classList.remove('active');
       arImageSection.classList.add('active');
       studioSection.classList.remove('active');
+
+      // Free up Studio WebGL VRAM when entering Image AR Mode
+      if (bagModelViewer && bagModelViewer.getAttribute('src')) {
+        bagModelViewer.removeAttribute('src');
+      }
     });
 
     tab3DStudio.addEventListener('click', () => {
@@ -45,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (arEngine) {
         arEngine.stop();
         if (arStartPrompt) arStartPrompt.classList.remove('hidden');
+      }
+
+      // Automatically load 3D Studio model only when entering Studio Mode
+      if (bagModelViewer && !bagModelViewer.getAttribute('src')) {
+        bagModelViewer.setAttribute('src', './blue_suitcase.glb');
       }
     });
   }
