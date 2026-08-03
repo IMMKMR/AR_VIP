@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.gemini/
+*.local
+.env
+.DS_Store
+blue suitcase 3d model.glb
+public/blue_suitcase_opt.glb
+VIP_Aristrocrate_AR_Snapshot.png
