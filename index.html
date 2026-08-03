@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>VIP ARISTROCRATE — High-Performance 3D & WebAR Experience</title>
+  <title>VIP ARISTROCRATE x COVANA — WebAR 3D Experience</title>
   
-  <!-- Premium Typography & Styling -->
+  <!-- Premium Modern Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="./src/style.css">
 
@@ -17,22 +17,48 @@
 </head>
 <body class="bg-obsidian">
 
-  <!-- Top Navigation Header (Clean & Uncluttered) -->
+  <!-- Top Brand Navigation Header (VIP & COVANA Theme) -->
   <header class="app-header">
     <div class="logo-container">
-      <span class="brand-badge">COVANA</span>
-      <h1 class="brand-title">VIP ARISTROCRATE</h1>
+      
+      <!-- COVANA Brand Logo -->
+      <div class="covana-logo">
+        <svg class="covana-icon" viewBox="0 0 50 28" width="40" height="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 14,3 A 11,11 0 1 0 14,25 A 11,11 0 0 0 14,3 Z" fill="none" stroke="url(#covanaAmber)" stroke-width="6" stroke-linecap="round" />
+          <path d="M 30,3 A 11,11 0 1 0 30,25 A 11,11 0 0 0 30,3 Z" fill="none" stroke="url(#covanaOrange)" stroke-width="6" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="covanaAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24"/>
+              <stop offset="100%" stop-color="#f59e0b"/>
+            </linearGradient>
+            <linearGradient id="covanaOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f97316"/>
+              <stop offset="100%" stop-color="#ea580c"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="covana-text">VANA<span class="reg-mark">®</span></span>
+      </div>
+
+      <div class="brand-divider"></div>
+
+      <!-- VIP Logo Mark with Slashed Brand Style -->
+      <div class="vip-logo-badge">
+        <span class="vip-text">VIP</span>
+        <span class="sub-brand">ARISTROCRATE</span>
+      </div>
+
     </div>
   </header>
 
-  <!-- View Mode Switcher Tabs -->
+  <!-- View Mode Switcher Tabs (Clean Solid Pills) -->
   <nav class="mode-tabs">
     <button id="tabARImage" class="tab-btn active">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
       <span>Scan 1.jpg (Image AR)</span>
     </button>
     <button id="tab3DStudio" class="tab-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
       <span>3D Studio & Room AR</span>
     </button>
   </nav>
@@ -52,7 +78,7 @@
           </div>
         </div>
 
-        <!-- Camera Framing Guide Overlay -->
+        <!-- Camera Framing Guide Overlay (Clean Brand Red & Orange Laser) -->
         <div id="arFramingGuide" class="framing-guide">
           <div class="frame-corner top-left"></div>
           <div class="frame-corner top-right"></div>
@@ -64,10 +90,10 @@
 
         <!-- AR Loading Progress Bar Overlay -->
         <div id="arLoader" class="loader-overlay hidden">
-          <div class="loader-card glass-panel">
-            <div class="spinner-gold"></div>
-            <h3 class="loader-title">Loading 3D Aristrocrate Bag</h3>
-            <p class="loader-subtitle">High-detail original model (55.87 MB)</p>
+          <div class="loader-card solid-panel">
+            <div class="spinner-brand"></div>
+            <h3 class="loader-title">Loading VIP ARISTROCRATE</h3>
+            <p class="loader-subtitle">High-resolution 3D luggage model (55.87 MB)</p>
             <div class="progress-bar-container">
               <div id="arProgressBar" class="progress-bar-fill" style="width: 0%;"></div>
             </div>
@@ -78,30 +104,30 @@
           </div>
         </div>
 
-        <!-- Start AR Camera Launch Screen -->
+        <!-- Start AR Camera Launch Screen (Solid Clean Brand Theme) -->
         <div id="arStartPrompt" class="start-prompt-overlay">
-          <div class="start-card glass-panel">
+          <div class="start-card solid-panel">
             <div class="start-icon-ring">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
             </div>
-            <h2>Scan 1.jpg to View AR Model</h2>
-            <p>Point your device camera at the <code>1.jpg</code> image card. The 3D Blue Aristrocrate Suitcase will automatically appear upright on top of it in 3D AR!</p>
+            <h2>Scan 1.jpg to View AR</h2>
+            <p>Point your smartphone camera at the <code>1.jpg</code> image card. The 3D VIP Aristrocrate Suitcase will stand upright on your target!</p>
             <div class="instructions-steps">
               <div class="step-item">
                 <span class="step-num">1</span>
-                <span>Tap Launch AR & allow camera access when prompted</span>
+                <span>Tap Launch AR & allow camera access</span>
               </div>
               <div class="step-item">
                 <span class="step-num">2</span>
-                <span>Point camera inside golden frame at target card (<code>1.jpg</code>)</span>
+                <span>Aim inside the red framing brackets at <code>1.jpg</code></span>
               </div>
               <div class="step-item">
                 <span class="step-num">3</span>
-                <span>Swipe to rotate around handle • Pinch to zoom</span>
+                <span>Swipe horizontally to spin • Pinch to zoom</span>
               </div>
             </div>
-            <button id="startARBtn" class="btn btn-gold btn-large">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            <button id="startARBtn" class="btn btn-brand-red btn-large">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
               <span>Launch AR Camera</span>
             </button>
           </div>
@@ -112,7 +138,7 @@
     <!-- ================= MODE 2: 3D STUDIO & ROOM AR VIEW ================= -->
     <section id="studioSection" class="view-section">
       <div class="studio-container">
-        <!-- Interactive 3D Model Viewer Container -->
+        <!-- Interactive 3D Model Viewer Container (Memory optimized: src loaded dynamically via main.js) -->
         <model-viewer 
           id="bagModelViewer"
           alt="VIP ARISTROCRATE Blue Suitcase 3D Model"
@@ -130,19 +156,19 @@
 
           <!-- Model Viewer Progress Overlay -->
           <div slot="progress-bar" id="mvProgressBar" class="mv-progress-overlay">
-            <div class="glass-panel mv-progress-box">
-              <div class="spinner-gold"></div>
-              <h3>Loading 3D Model...</h3>
+            <div class="solid-panel mv-progress-box">
+              <div class="spinner-brand"></div>
+              <h3>Loading 3D Studio...</h3>
               <div class="progress-bar-container">
                 <div id="mvProgressFill" class="progress-bar-fill" style="width: 0%;"></div>
               </div>
-              <span id="mvProgressText">0%</span>
+              <span id="mvProgressText" class="progress-stats">0%</span>
             </div>
           </div>
 
-          <!-- AR Surface Launch Button (Android / iOS native AR floor placement) -->
-          <button slot="ar-button" id="arSurfaceBtn" class="btn btn-gold ar-surface-floating-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.1 12"/><path d="M12 12v9.9"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+          <!-- AR Surface Launch Button (Solid VIP Brand Red) -->
+          <button slot="ar-button" id="arSurfaceBtn" class="btn btn-brand-red ar-surface-floating-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.1 12"/><path d="M12 12v9.9"/><path d="m4.93 4.93 4.24 4.24"/></svg>
             <span>Place Suitcase in Your Room (AR)</span>
           </button>
 
