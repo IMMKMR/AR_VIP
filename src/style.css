@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VIP ARISTROCRATE x COVANA — Professional Luxury Brand UI Theme
+   VIP ARISTOCRAT x COVANA — Professional Luxury Brand UI Theme
    Clean solid filled colors, high-contrast architecture, zero AI blur/glows
    ========================================================================== */
 
@@ -78,36 +78,21 @@ html, body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
-/* COVANA Brand Mark */
-.covana-logo {
+/* COVANA Actual Logo Styling */
+.covana-logo-wrap {
   display: flex;
   align-items: center;
-  gap: 2px;
+  height: 26px;
 }
 
-.covana-icon {
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.covana-text {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  line-height: 1;
-}
-
-.reg-mark {
-  font-size: 11px;
-  vertical-align: super;
-  margin-left: 2px;
-  color: #94a3b8;
-  font-weight: 600;
+.covana-actual-logo {
+  max-height: 24px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 /* Brand Separator */
@@ -117,35 +102,29 @@ html, body {
   background-color: var(--border-subtle);
 }
 
-/* VIP ARISTROCRATE Logo Mark with Slashed Brand Style */
+/* VIP Actual Logo Mark + ARISTOCRAT Title */
 .vip-logo-badge {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
+  height: 26px;
 }
 
-.vip-text {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-style: italic;
-  font-size: 26px;
-  letter-spacing: -1.5px;
-  background: linear-gradient(105deg, var(--vip-red) 43%, #ffffff 45%, #ffffff 50%, var(--vip-red) 52%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  transform: skew(-8deg);
-  display: inline-block;
-  line-height: 1;
+.vip-actual-logo {
+  max-height: 26px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .sub-brand {
   font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
   color: #ffffff;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 /* ================= Clean Filled Brand Buttons ================= */
